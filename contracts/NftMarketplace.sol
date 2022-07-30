@@ -44,12 +44,6 @@ contract NftMarketplace is ReentrancyGuard {
         uint256 indexed tokenId,
         address seller
     );
-    event ItemUpdated(
-        address indexed seller,
-        address indexed marketplaceAddress,
-        uint256 indexed tokenId,
-        uint256 newPrice
-    );
 
     ////////////////
     // Modifiers //
@@ -174,7 +168,7 @@ contract NftMarketplace is ReentrancyGuard {
         isOwner(nftContractAddress, tokenId, msg.sender)
     {
         s_listings[nftContractAddress][tokenId].price = newPrice;
-        emit ItemUpdated(msg.sender, nftContractAddress, tokenId, newPrice);
+        emit ItemListed(msg.sender, nftContractAddress, tokenId, newPrice);
     }
 
     /*
