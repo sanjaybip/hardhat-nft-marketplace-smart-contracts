@@ -33,4 +33,9 @@ export const VERIFICATION_BLOCK_CONFIRMATIONS = 4;
 export const frontEndContractsFileMoralis =
     "../nextjs-nft-marketplace-moralis/constants/networkMapping.json";
 export const frontEndAbiLocationMoralis = "../nextjs-nft-marketplace-moralis/constants/";
+
+export const frontEndContractsFileGraph =
+    "../nextjs-nft-marketplace-thegraph/constants/networkMapping.json";
+export const frontEndAbiLocationGraph = "../nextjs-nft-marketplace-thegraph/constants/";
+
 export const developmentChains = ["hardhat", "localhost"];
